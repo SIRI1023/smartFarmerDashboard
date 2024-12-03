@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mint-bg: #f0fdf4;
+  --primary-green: #22c55e;
+}
+
+@layer base {
+  body {
+    @apply bg-mint font-sans text-gray-900;
+  }
+}
+
+@layer components {
+  .auth-card {
+    @apply bg-white rounded-3xl shadow-xl p-8 w-full max-w-md mx-auto;
+  }
+
+  .auth-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 
+           focus:border-green-500 focus:ring-1 focus:ring-green-500 focus:outline-none
+           bg-white text-gray-900;
+  }
+
+  .auth-button {
+    @apply w-full py-3 px-4 bg-green-600 text-white rounded-lg font-medium
+           hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+           transition-colors duration-200;
+  }
+
+  .auth-divider {
+    @apply relative my-6;
+  }
+
+  .auth-divider::before {
+    content: '';
+    @apply absolute top-1/2 left-0 w-full h-px bg-gray-200;
+  }
+
+  .auth-divider span {
+    @apply relative z-10 bg-white px-4 text-sm text-gray-500;
+  }
+
+  .auth-alt-button {
+    @apply w-full py-3 px-4 bg-white text-gray-700 rounded-lg font-medium border border-gray-200
+           hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+           transition-colors duration-200;
+  }
+
+  .nav-link {
+    @apply flex items-center space-x-3 px-4 py-2.5 rounded-lg text-gray-600 
+           hover:bg-green-50 hover:text-green-600 transition-colors duration-200;
+  }
+
+  .nav-link.active {
+    @apply bg-green-50 text-green-600 font-medium;
+  }
+
+  .upload-area {
+    @apply border-2 border-dashed border-gray-300 rounded-lg p-12 text-center
+           hover:border-green-500 transition-colors cursor-pointer;
+  }
+
+  .weather-card {
+    @apply bg-white rounded-xl shadow-sm p-6;
+  }
+
+  .weather-stat {
+    @apply flex flex-col items-center justify-center p-4;
+  }
+}
